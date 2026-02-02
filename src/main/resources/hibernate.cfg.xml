@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- Database Connection Settings -->
+        <property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+        <property name="hibernate.connection.url">jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=orabetstx-scan.sg.gbs.pro)(PORT=1521))(ADDRESS=(PROTOCOL=TCP)(HOST=orabetsty-scan.sg.gbs.pro)(PORT=1521))(ADDRESS=(PROTOCOL=TCP)(HOST=orabetstz-scan.sg.gbs.pro)(PORT=1521))(FAILOVER=ON)(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=OTH_ORABE.bsella.it)))</property>
+        <property name="hibernate.connection.username">svil_p2p</property>
+        <property name="hibernate.connection.password">zzz111...</property>
+        
+        <!-- Oracle Dialect -->
+        <property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
+        
+        <!-- SQL Settings -->
+        <property name="show_sql">true</property>
+        <property name="format_sql">true</property>
+        <property name="use_sql_comments">true</property>
+        
+        <!-- Connection Pool -->
+        <property name="hibernate.connection.pool_size">10</property>
+        
+        <!-- Mapping Classes -->
+        <mapping class="com.banking.entity.RefNotificationChannel"/>
+        <mapping class="com.banking.entity.KycProfile"/>
+        <mapping class="com.banking.entity.Customer"/>
+        <mapping class="com.banking.entity.Account"/>
+        <mapping class="com.banking.entity.BankTransaction"/>
+        <mapping class="com.banking.entity.AccountSubscription"/>
+    </session-factory>
+</hibernate-configuration>
