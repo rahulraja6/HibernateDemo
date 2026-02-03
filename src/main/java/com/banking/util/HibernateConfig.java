@@ -28,9 +28,9 @@ public class HibernateConfig {
                 
                 // Database connection settings
                 settings.put(Environment.DRIVER, "oracle.jdbc.driver.OracleDriver");
-                settings.put(Environment.URL, "jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=orabetstx-scan.sg.gbs.pro)(PORT=1521))(ADDRESS=(PROTOCOL=TCP)(HOST=orabetsty-scan.sg.gbs.pro)(PORT=1521))(ADDRESS=(PROTOCOL=TCP)(HOST=orabetstz-scan.sg.gbs.pro)(PORT=1521))(FAILOVER=ON)(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=OTH_ORABE.bsella.it)))");
-                settings.put(Environment.USER, "svil_p2p");
-                settings.put(Environment.PASS, "zzz111...");
+                settings.put(Environment.URL, "*********************************************");
+                settings.put(Environment.USER, "*********************************************");
+                settings.put(Environment.PASS, "*********************************************");
                 
                 // Dialect
                 settings.put(Environment.DIALECT, "org.hibernate.dialect.Oracle10gDialect");
